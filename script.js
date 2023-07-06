@@ -20,11 +20,14 @@ function weatherSearch(){
 
         result.innerHTML = `
         <h3 class="text-center mainHeading">Weather in ${locName},${country}</h3>
+
         <div class="temp text-center">
         <img src="https://openweathermap.org/img/w/${icon}.png">
         <h1 class="headingTemp">${temperature}°C</h1>
         </div>
+
         <h4 class="text-center">${description}</h4>
+
         <div class="grid-box mt-4">
         <div class="item1">
         <ul>
@@ -32,6 +35,7 @@ function weatherSearch(){
         <li>Visibility : ${visibility} km</li>
         </ul>
         </div>
+        
         <div class="item2">
         <ul>
         <li>Wind Speed : ${speed} m/s</li>
@@ -40,5 +44,15 @@ function weatherSearch(){
         </div>
         </div>
         ` 
+    }
+
+}
+
+function mykey(event){
+    // console.log(event);
+    var x = event.code;
+    console.log(x);
+    if (x=="NumpadEnter"|| x=="Enter") {
+        weatherSearch()
     }
 }

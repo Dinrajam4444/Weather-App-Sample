@@ -22,7 +22,7 @@
 <body>
     <div class="main">
         <div class="search-container">
-            <input id="search__box" type="text" placeholder=" Search City">
+            <input id="search__box" onkeypress="mykey(event)" type="text" placeholder=" Search City">
             <button onclick="weatherSearch()" id="search__button" type="button" class="ms-1"><i
                     class="fa fa-search"></i></button>
         </div>
@@ -33,3 +33,5 @@
 </body>
 <script src="./script.js"></script>
 </html>
+
+
